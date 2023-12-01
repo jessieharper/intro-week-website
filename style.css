@@ -1,0 +1,167 @@
+/* Columns of text should be 40-60 characters long */
+
+body {
+  background-color: rgb(115, 144, 182);
+}
+
+/* Layout */
+
+.first-column {
+  grid-column: 1;
+}
+
+.last-column {
+  grid-column: 5;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr 1fr 1fr 0.75fr;
+  margin-inline: auto;
+  gap: 1%;
+}
+
+.header {
+  grid-column: span 3;
+  border: 0.15em solid rgba(3, 8, 66, 0.392);
+  border-radius: 0.1em;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  padding: 0.3em;
+}
+
+/* Contents of page */
+
+h1 {
+  font-family: "Libre Baskerville", serif;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(0, 39, 43);
+  font-size: 5rem;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Libre Baskerville", serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+.link-one {
+  grid-column: 2;
+}
+
+.link-two {
+  grid-column: 3;
+}
+
+.link-three {
+  grid-column: 4;
+  justify-self: right;
+  width: 100%;
+}
+
+.links {
+  background-color: rgb(28, 94, 94);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+  border: 0.3em solid rgba(38, 32, 67, 0.303);
+  border-radius: 0.5em;
+  transition: 0.3s;
+}
+
+.links:hover {
+  background-color: rgb(202, 148, 185);
+  transform: translateY(-10px);
+}
+
+a {
+  color: rgb(0, 39, 43);
+  text-decoration: none;
+}
+
+.about-me.title {
+  grid-column: span 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.about-me {
+  background-color: rgba(190, 205, 220, 0.359);
+  border: solid rgba(154, 182, 211, 0.707);
+  border-radius: 5px;
+  color: rgba(0, 39, 43, 0.819);
+
+  text-align: center;
+
+  grid-column: span 2;
+  grid-column-end: 4;
+  grid-row: span 3;
+  grid-row: 5/8;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  text-align: justify;
+  padding: 10px;
+}
+
+.pdf {
+  width: 10em;
+  opacity: 75%;
+  justify-self: center;
+
+  grid-column: 4;
+  grid-row: 6;
+}
+
+.download-text {
+  grid-column: 4;
+  grid-row: 5;
+  text-align: left;
+}
+
+.buttons {
+  grid-column-start: 2;
+  grid-row: 8;
+  margin-bottom: 5em;
+  margin-right: 8em;
+}
+
+.linkedIn {
+  position: absolute;
+  height: 68%;
+  margin-left: 3em;
+  margin-top: 0.2em;
+}
+
+.github {
+  position: absolute;
+  height: 70%;
+  margin-left: 11em;
+  margin-top: 0.2em;
+}
+
+/* Animations */
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+}
