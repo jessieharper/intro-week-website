@@ -22,21 +22,47 @@ body {
 }
 
 .header {
+  grid-column-start: 2;
   grid-column: span 3;
-  border: 0.15em solid rgba(3, 8, 66, 0.392);
+  grid-row: 1;
+  border: 0.15em solid rgba(87, 92, 132, 0.601);
+  border-left: 1.5em solid rgba(198, 203, 255, 0.22);
+  border-right: 1.5em solid rgba(198, 203, 255, 0.22);
   border-radius: 0.1em;
+  border-style: double;
   margin-bottom: 2%;
-  margin-top: 2%;
+  margin-top: 0;
   padding: 0.3em;
 }
 
 /* Contents of page */
 
+.left-border {
+  width: 14em;
+  justify-self: center;
+  grid-column: 1;
+  grid-row: span 4;
+  border-radius: 1em;
+  opacity: 30%;
+}
+
+.first {
+  grid-row: 1 / 5;
+}
+
+.second {
+  grid-row: 3 / 8;
+}
+
+.third {
+  grid-row: 6 / 9;
+}
+
 h1 {
-  font-family: "Libre Baskerville", serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-family: "Montserrat", sans-serif;
-  color: rgb(0, 39, 43);
-  font-size: 5rem;
+  font-size: 4rem;
+  color: rgb(210, 197, 181);
   text-align: center;
 }
 
@@ -47,14 +73,17 @@ h2 {
 
 .link-one {
   grid-column: 2;
+  grid-row: 2;
 }
 
 .link-two {
   grid-column: 3;
+  grid-row: 2;
 }
 
 .link-three {
   grid-column: 4;
+  grid-row: 2;
   justify-self: right;
   width: 100%;
 }
@@ -75,7 +104,7 @@ h2 {
 }
 
 a {
-  color: rgb(0, 39, 43);
+  color: rgba(250, 251, 251, 0.791);
   text-decoration: none;
 }
 
@@ -84,6 +113,8 @@ a {
   grid-column-end: 4;
   grid-row-start: 4;
   grid-row-end: 5;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .about-me {
@@ -101,44 +132,51 @@ a {
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.2em;
   text-align: justify;
   padding: 10px;
 }
 
-.pdf {
-  width: 10em;
-  opacity: 75%;
-  justify-self: center;
-
-  grid-column: 4;
-  grid-row: 6;
-}
-
-.download-text {
+.pdf-text {
   grid-column: 4;
   grid-row: 5;
-  text-align: left;
+  color: rgba(0, 39, 43, 0.819);
+  text-align: center;
+}
+
+.pdf-logo {
+  grid-column: 4;
+  grid-row: 6;
+  height: 8em;
+  justify-self: center;
+}
+
+.img {
+  width: 16em;
+  justify-self: center;
+  opacity: 75%;
+  grid-column: 4;
+  grid-row: 5 / 7;
 }
 
 .buttons {
   grid-column-start: 2;
   grid-row: 8;
-  margin-bottom: 5em;
+  margin-bottom: 1.5em;
   margin-right: 8em;
 }
 
 .linkedIn {
   position: absolute;
-  height: 68%;
+  height: 82%;
   margin-left: 3em;
   margin-top: 0.2em;
 }
 
 .github {
   position: absolute;
-  height: 70%;
+  height: 88%;
   margin-left: 11em;
   margin-top: 0.2em;
 }
